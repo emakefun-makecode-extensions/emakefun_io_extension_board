@@ -1,4 +1,4 @@
-# MakeCode Extension for Emakefun IO Extension Board
+# MakeCode Extension For Emakefun IO Extension Board
 
 ## Introduction
 
@@ -42,7 +42,7 @@
 
 ## Example
 
-### digital writing and reading
+### Digital writing and reading
 
 This example shows how to configure E0 for digital input and E1 for digital output. It reads the input value from E0 and displays it on the Microbit LED screen. It also writes digital value 1 to the output pin E1.
 
@@ -58,7 +58,7 @@ basic.forever(function () {
 })
 ```
 
-### analog reading
+### Analog reading
 
 This example shows how to use analog input on pin E0. It reads the analog value and displays it on the Microbit screen.
 
@@ -72,7 +72,7 @@ basic.forever(function () {
 })
 ```
 
-### Output Pwm
+### Output pwm
 
 This example shows how to configure PWM output on pin E1. It sets the frequency to 1000Hz and a duty cycle of 2048 (half).
 
