@@ -22,9 +22,9 @@ namespace Emakefun {
     InputPullUp = 1 << 0,    // Input with pull-up resistor
     InputPullDown = 1 << 1,  // Input with pull-down resistor
     InputFloating = 1 << 2,  // Input without pull-up/down resistor
-    Output = 1 << 3,         // Output mode
-    Adc = 1 << 4,            // Analog input mode
-    Pwm = 1 << 5,            // PWM output mode
+    OutputDigital = 1 << 3,  // Output mode
+    InputAnalog = 1 << 4,    // Analog input mode
+    OutputPwm = 1 << 5,      // PWM output mode
   }
 
   /**
