@@ -1,0 +1,13 @@
+let io_extension_board = Emakefun.createIoExtensionBoard(36)
+io_extension_board.setPwmFrequency(50)
+io_extension_board.setPinMode(Emakefun.Pin.E1, Emakefun.PinMode.Pwm)
+basic.forever(function() {
+  io_extension_board.setServoAngle(Emakefun.Pin.E1, 0)
+  basic.pause(1000)
+  io_extension_board.setServoAngle(Emakefun.Pin.E1, 90)
+  basic.pause(1000)
+  io_extension_board.setServoAngle(Emakefun.Pin.E1, 180)
+  basic.pause(1000)
+  io_extension_board.setServoAngle(Emakefun.Pin.E1, 90)
+  basic.pause(1000)
+})

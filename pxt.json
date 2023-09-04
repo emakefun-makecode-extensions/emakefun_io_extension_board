@@ -1,0 +1,25 @@
+{
+    "name": "EmakefunIOExtensionBoard",
+    "version": "0.0.0",
+    "description": "",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "EmakefunI2cDevice": "github:emakefun-makecode-extensions/emakefun_i2c_device#v1.0.5"
+    },
+    "files": [
+        "README.md",
+        "main.blocks",
+        "io_extension_board.ts",
+        "_locales/zh/EmakefunIOExtensionBoard-jsdoc-strings.json",
+        "_locales/zh/EmakefunIOExtensionBoard-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}

@@ -1,0 +1,19 @@
+{
+  "Emakefun.IoExtensionBoard.analogRead|block": "$this 从引脚 $pin 读取模拟值",
+  "Emakefun.IoExtensionBoard.digitalRead|block": "$this 从引脚 $pin 读取数字值",
+  "Emakefun.IoExtensionBoard.digitalWrite|block": "$this 向引脚 $pin 写入数字值 $value",
+  "Emakefun.IoExtensionBoard.setPinMode|block": "$this 设置引脚 $pin 模式为 $pin_mode",
+  "Emakefun.IoExtensionBoard.setPwmDuty|block": "$this 设置引脚 $pin PWM占空比为 $duty",
+  "Emakefun.IoExtensionBoard.setPwmFrequency|block": "$this 设置PWM频率为 $frequency Hz",
+  "Emakefun.IoExtensionBoard.setServoAngle|block": "$this 设置引脚 $pin 舵机角度为 $angle 度",
+  "Emakefun.createIoExtensionBoard|block": "创建Emakefun IO扩展板|I2C地址 $i2c_address",
+  "Emakefun|block": "Emakefun",
+  "{id:category}Emakefun": "Emakefun",
+  "{id:group}analog": "模拟",
+  "{id:group}constructor": "构造",
+  "{id:group}digital": "数字",
+  "{id:group}initialization": "初始化",
+  "{id:group}pwm": "PWM",
+  "{id:group}servo control": "舵机控制",
+  "{id:subcategory}IoExtensionBoard": "IO扩展板"
+}
