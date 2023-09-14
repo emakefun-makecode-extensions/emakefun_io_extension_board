@@ -40,6 +40,8 @@
 
 ## Hardware
 
+![icon.png](icon.png)
+
 ## Example
 
 ### Digital writing and reading
