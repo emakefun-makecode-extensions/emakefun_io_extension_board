@@ -1,5 +1,5 @@
 //% block="Emakefun"
-namespace Emakefun {
+namespace emakefun {
 
   /**
    * Enumeration for pins on the extension board

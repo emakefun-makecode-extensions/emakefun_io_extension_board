@@ -49,12 +49,12 @@ This example shows how to configure E0 for digital input and E1 for digital outp
 You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_DXp2z22WiW8x).
 
 ```block
-let io_extension_board = Emakefun.createIoExtensionBoard(36)
-io_extension_board.setPinMode(Emakefun.Pin.E0, Emakefun.PinMode.InputPullUp)
-io_extension_board.setPinMode(Emakefun.Pin.E1, Emakefun.PinMode.OutputDigital)
+let io_extension_board = emakefun.createIoExtensionBoard(36)
+io_extension_board.setPinMode(emakefun.Pin.E0, emakefun.PinMode.InputPullUp)
+io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.OutputDigital)
 basic.forever(function () {
-    basic.showNumber(io_extension_board.digitalRead(Emakefun.Pin.E0))
-    io_extension_board.digitalWrite(Emakefun.Pin.E1, 1)
+    basic.showNumber(io_extension_board.digitalRead(emakefun.Pin.E0))
+    io_extension_board.digitalWrite(emakefun.Pin.E1, 1)
 })
 ```
 
@@ -65,10 +65,10 @@ This example shows how to use analog input on pin E0. It reads the analog value 
 You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_1ETgVxKThPP7).
 
 ```block
-let io_extension_board = Emakefun.createIoExtensionBoard(36)
-io_extension_board.setPinMode(Emakefun.Pin.E0, Emakefun.PinMode.InputAnalog)
+let io_extension_board = emakefun.createIoExtensionBoard(36)
+io_extension_board.setPinMode(emakefun.Pin.E0, emakefun.PinMode.InputAnalog)
 basic.forever(function () {
-    basic.showNumber(io_extension_board.analogRead(Emakefun.Pin.E0))
+    basic.showNumber(io_extension_board.analogRead(emakefun.Pin.E0))
 })
 ```
 
@@ -79,11 +79,11 @@ This example shows how to configure PWM output on pin E1. It sets the frequency 
 You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_gDR0DmLfTXo8).
 
 ```block
-let io_extension_board = Emakefun.createIoExtensionBoard(36)
+let io_extension_board = emakefun.createIoExtensionBoard(36)
 io_extension_board.setPwmFrequency(1000)
-io_extension_board.setPinMode(Emakefun.Pin.E1, Emakefun.PinMode.OutputPwm)
+io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.OutputPwm)
 basic.forever(function () {
-    io_extension_board.setPwmDuty(Emakefun.Pin.E1, 2048)
+    io_extension_board.setPwmDuty(emakefun.Pin.E1, 2048)
 })
 ```
 
@@ -96,13 +96,13 @@ This example shows how to control a servo on pin E1. It sets PWM frequency to 50
 You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_fPoeWsV2iTk0).
 
 ```block
-let io_extension_board = Emakefun.createIoExtensionBoard(36)
+let io_extension_board = emakefun.createIoExtensionBoard(36)
 io_extension_board.setPwmFrequency(50)
-io_extension_board.setPinMode(Emakefun.Pin.E1, Emakefun.PinMode.OutputPwm)
+io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.OutputPwm)
 basic.forever(function () {
-    io_extension_board.setServoAngle(Emakefun.Pin.E1, 0)
+    io_extension_board.setServoAngle(emakefun.Pin.E1, 0)
     basic.pause(1000)
-    io_extension_board.setServoAngle(Emakefun.Pin.E1, 90)
+    io_extension_board.setServoAngle(emakefun.Pin.E1, 90)
     basic.pause(1000)
 })
 ```
