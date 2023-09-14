@@ -46,7 +46,7 @@
 
 This example shows how to configure E0 for digital input and E1 for digital output. It reads the input value from E0 and displays it on the Microbit LED screen. It also writes digital value 1 to the output pin E1.
 
-You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_UXHMjWV1ieJ7).
+You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_T5camXf8mP4k).
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
@@ -62,7 +62,7 @@ basic.forever(function () {
 
 This example shows how to use analog input on pin E0. It reads the analog value and displays it on the Microbit screen.
 
-You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_XKV7KrAiaeTr).
+You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_eRJ48tRdwEeK).
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
@@ -76,7 +76,7 @@ basic.forever(function () {
 
 This example shows how to configure PWM output on pin E1. It sets the frequency to 1000Hz and a duty cycle of 2048 (half).
 
-You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_c2y1xzFViYLA).
+You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_EAfWLz5Fm0XX).
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
@@ -93,7 +93,7 @@ This example shows how to control a servo on pin E1. It sets PWM frequency to 50
 
 **Note: Controlling servo motors requires an external power supply, the micro:bit alone cannot provide enough current.**
 
-You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_gwqTAE7sC3Tj).
+You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_VHgWg44MMK8J).
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
