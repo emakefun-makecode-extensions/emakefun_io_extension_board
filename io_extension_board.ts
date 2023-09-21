@@ -19,12 +19,12 @@ namespace emakefun {
    * Enumeration for pin modes
    */
   export const enum PinMode {
-    InputPullUp = 1 << 0,    // Input with pull-up resistor
-    InputPullDown = 1 << 1,  // Input with pull-down resistor
-    InputFloating = 1 << 2,  // Input without pull-up/down resistor
-    OutputDigital = 1 << 3,  // Output mode
-    InputAnalog = 1 << 4,    // Analog input mode
-    OutputPwm = 1 << 5,      // PWM output mode
+    DigitalInputPullUp = 1 << 0,    // Input with pull-up resistor
+    DigitalInputPullDown = 1 << 1,  // Input with pull-down resistor
+    DigitalInputFloating = 1 << 2,  // Input without pull-up/down resistor
+    DigitalOutput = 1 << 3,         // Output mode
+    AnalogInput = 1 << 4,           // Analog input mode
+    PwmOutput = 1 << 5,             // PWM output mode
   }
 
   /**
@@ -55,14 +55,14 @@ namespace emakefun {
   }
 
   export class IoExtensionBoard {
-    private readonly i2c_device: Emakefun.I2cDevice = undefined
+    private readonly i2c_device: emakefun.I2cDevice = undefined
 
     /**
      * Constructor
      * @param i2c_address I2C address of the module, default 0x24
      */
     constructor(i2c_address: number = 0x24) {
-      this.i2c_device = new Emakefun.I2cDevice(i2c_address);
+      this.i2c_device = new emakefun.I2cDevice(i2c_address);
     }
 
     /**

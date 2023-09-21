@@ -18,12 +18,12 @@
 
   - Configure pin modes using setPinMode. The available pin modes are:
 
-    - `PinMode.InputPullUp` - Input with pull-up resistor
-    - `PinMode.InputPullDown` - Input with pull-down resistor
-    - `PinMode.InputFloating` - Input without pull-up/down resistor
-    - `PinMode.OutputDigital` - Digital output
-    - `PinMode.InputAnalog` - Analog input
-    - `PinMode.OutputPwm` - PWM output
+    - `PinMode.DigitalInputPullUp` - Input with pull-up resistor
+    - `PinMode.DigitalInputPullDown` - Input with pull-down resistor
+    - `PinMode.DigitalInputFloating` - Input without pull-up/down resistor
+    - `PinMode.DigitalOutput` - Digital output
+    - `PinMode.AnalogInput` - Analog input
+    - `PinMode.PwmOutput` - PWM output
   - Read digital input using `digitalRead`
 
   - Write digital output using `digitalWrite`
@@ -38,10 +38,6 @@
 
   **Note: Controlling servo motors requires an external power supply, the micro:bit alone cannot provide enough current.**
 
-## Hardware
-
-![icon.png](icon.png)
-
 ## Example
 
 ### Digital writing and reading
@@ -52,8 +48,8 @@ You can copy the code from below or view the project (blocks and JavaScript view
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
-io_extension_board.setPinMode(emakefun.Pin.E0, emakefun.PinMode.InputPullUp)
-io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.OutputDigital)
+io_extension_board.setPinMode(emakefun.Pin.E0, emakefun.PinMode.DigitalInputPullUp)
+io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.DigitalOutput)
 basic.forever(function () {
     basic.showNumber(io_extension_board.digitalRead(emakefun.Pin.E0))
     io_extension_board.digitalWrite(emakefun.Pin.E1, 1)
@@ -68,7 +64,7 @@ You can copy the code from below or view the project (blocks and JavaScript view
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
-io_extension_board.setPinMode(emakefun.Pin.E0, emakefun.PinMode.InputAnalog)
+io_extension_board.setPinMode(emakefun.Pin.E0, emakefun.PinMode.AnalogInput)
 basic.forever(function () {
     basic.showNumber(io_extension_board.analogRead(emakefun.Pin.E0))
 })
@@ -83,7 +79,7 @@ You can copy the code from below or view the project (blocks and JavaScript view
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
 io_extension_board.setPwmFrequency(1000)
-io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.OutputPwm)
+io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.PwmOutput)
 basic.forever(function () {
     io_extension_board.setPwmDuty(emakefun.Pin.E1, 2048)
 })
@@ -100,7 +96,7 @@ You can copy the code from below or view the project (blocks and JavaScript view
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
 io_extension_board.setPwmFrequency(50)
-io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.OutputPwm)
+io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.PwmOutput)
 basic.forever(function () {
     io_extension_board.setServoAngle(emakefun.Pin.E1, 0)
     basic.pause(1000)

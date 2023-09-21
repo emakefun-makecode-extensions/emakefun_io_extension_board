@@ -1,7 +1,15 @@
 let io_extension_board = emakefun.createIoExtensionBoard(36)
-io_extension_board.setPinMode(emakefun.Pin.E0, emakefun.PinMode.InputPullUp)
-io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.OutputPwm)
+io_extension_board.setPwmFrequency(100)
+io_extension_board.setPinMode(emakefun.Pin.E0, emakefun.PinMode.DigitalInputPullUp)
+io_extension_board.setPinMode(emakefun.Pin.E1, emakefun.PinMode.PwmOutput)
+io_extension_board.setPinMode(emakefun.Pin.E2, emakefun.PinMode.DigitalInputPullDown)
+io_extension_board.setPinMode(emakefun.Pin.E3, emakefun.PinMode.DigitalInputFloating)
+io_extension_board.setPinMode(emakefun.Pin.E4, emakefun.PinMode.DigitalOutput)
+io_extension_board.setPinMode(emakefun.Pin.E5, emakefun.PinMode.AnalogInput)
+
 basic.forever(function() {
   basic.showNumber(io_extension_board.digitalRead(emakefun.Pin.E0))
-  io_extension_board.digitalWrite(emakefun.Pin.E1, 1)
+  io_extension_board.setPwmDuty(emakefun.Pin.E1, 2048)
+  io_extension_board.digitalWrite(emakefun.Pin.E4, 1)
+  io_extension_board.analogRead(emakefun.Pin.E5)
 })
