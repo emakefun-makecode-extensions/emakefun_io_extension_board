@@ -1,6 +1,6 @@
 {
     "name": "EmakefunIOExtensionBoard",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "The Emakefun IO Extension Board is a versatile hardware platform with multiple input/output capabilities.",
     "license": "MIT",
     "dependencies": {
