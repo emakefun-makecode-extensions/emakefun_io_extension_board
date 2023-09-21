@@ -6,6 +6,8 @@
 
 - Through this extension, you can easily use the Emakefun IO Extension Board to add peripherals like digital input/output, analog input, PWM output and servo control in the MakeCode Blocks editor.
 
+- You can get this module from [here](https://www.aliexpress.com/item/1005006064021730.html)
+
 ## Usage
 
 - To use this extension, simply add the extension file to MakeCode and start coding with the provided blocks under the "Emakefun" category.
@@ -18,9 +20,9 @@
 
   - Configure pin modes using setPinMode. The available pin modes are:
 
-    - `PinMode.DigitalInputPullUp` - Input with pull-up resistor
-    - `PinMode.DigitalInputPullDown` - Input with pull-down resistor
-    - `PinMode.DigitalInputFloating` - Input without pull-up/down resistor
+    - `PinMode.DigitalInputPullUp` - Digital input with pull-up resistor
+    - `PinMode.DigitalInputPullDown` - Digital input with pull-down resistor
+    - `PinMode.DigitalInputFloating` - Digital input without pull-up/down resistor
     - `PinMode.DigitalOutput` - Digital output
     - `PinMode.AnalogInput` - Analog input
     - `PinMode.PwmOutput` - PWM output
@@ -44,7 +46,7 @@
 
 This example shows how to configure E0 for digital input and E1 for digital output. It reads the input value from E0 and displays it on the Microbit LED screen. It also writes digital value 1 to the output pin E1.
 
-You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_T5camXf8mP4k).
+You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_b2X3ECK0VDH5).
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
@@ -60,7 +62,7 @@ basic.forever(function () {
 
 This example shows how to use analog input on pin E0. It reads the analog value and displays it on the Microbit screen.
 
-You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_eRJ48tRdwEeK).
+You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_UiYK0X9WWJzK).
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
@@ -70,11 +72,11 @@ basic.forever(function () {
 })
 ```
 
-### Output pwm
+### Pwm Output
 
 This example shows how to configure PWM output on pin E1. It sets the frequency to 1000Hz and a duty cycle of 2048 (half).
 
-You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_EAfWLz5Fm0XX).
+You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_hXKUcrDHAgco).
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
@@ -91,7 +93,7 @@ This example shows how to control a servo on pin E1. It sets PWM frequency to 50
 
 **Note: Controlling servo motors requires an external power supply, the micro:bit alone cannot provide enough current.**
 
-You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_VHgWg44MMK8J).
+You can copy the code from below or view the project (blocks and JavaScript view) [here](https://makecode.microbit.org/_7F1Uh81F0Xju).
 
 ```block
 let io_extension_board = emakefun.createIoExtensionBoard(36)
