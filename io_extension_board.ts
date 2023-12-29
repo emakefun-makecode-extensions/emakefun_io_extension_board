@@ -54,15 +54,13 @@ namespace emakefun {
     return new IoExtensionBoard(i2c_address);
   }
 
-  export class IoExtensionBoard {
-    private readonly i2c_device: emakefun.I2cDevice = undefined
-
+  export class IoExtensionBoard extends I2cDevice {
     /**
      * Constructor
      * @param i2c_address I2C address of the module, default 0x24
      */
     constructor(i2c_address: number = 0x24) {
-      this.i2c_device = new emakefun.I2cDevice(i2c_address);
+      super(i2c_address);
     }
 
     /**
@@ -76,7 +74,7 @@ namespace emakefun {
     //% pin_mode.defl=Output
     //% group="initialization"
     setPinMode(pin: Pin, pin_mode: PinMode) {
-      this.i2c_device.writeByte(Address.IoMode + pin, pin_mode);
+      this.i2cWriteUint8To(Address.IoMode + pin, pin_mode);
     }
 
     /**
@@ -90,7 +88,7 @@ namespace emakefun {
     //% frequency.defl=50
     //% group="initialization"
     setPwmFrequency(frequency: number) {
-      this.i2c_device.writeBytes(Address.PwmFrequency, Buffer.pack('<H', [frequency]));
+      this.i2cWriteUint16leTo(Address.PwmFrequency, frequency);
     }
 
     /**
@@ -104,7 +102,7 @@ namespace emakefun {
     //% value.min=0 value.max=1
     //% group="digital"
     digitalWrite(pin: Pin, value: number) {
-      this.i2c_device.writeByte(Address.DigitalValue + pin, value);
+      this.i2cWriteUint8To(Address.DigitalValue + pin, value);
     }
 
     /**
@@ -117,7 +115,7 @@ namespace emakefun {
     //% this.defl=io_extension_board
     //% group="digital"
     digitalRead(pin: Pin): number {
-      return this.i2c_device.readByte(Address.DigitalValue + pin);
+      return this.i2cReadUint8From(Address.DigitalValue + pin);
     }
 
     /**
@@ -130,8 +128,7 @@ namespace emakefun {
     //% this.defl=io_extension_board
     //% group="analog"
     analogRead(pin: Pin): number {
-      let bytes = this.i2c_device.readBytes(Address.AnalogValue + (pin << 1), 2);
-      return (bytes[1] << 8) | bytes[0];
+      return this.i2cReadInt16leFrom(Address.AnalogValue + (pin << 1));
     }
 
     /**
@@ -146,7 +143,7 @@ namespace emakefun {
     //% duty.min=0 duty.max=4095
     //% group="pwm"
     setPwmDuty(pin: Pin, duty: number) {
-      this.i2c_device.writeBytes(Address.PwmDuty + (pin << 1), Buffer.pack('<H', [duty]));
+      this.i2cWriteUint16leTo(Address.PwmDuty + (pin << 1), duty);
     }
 
     /**
